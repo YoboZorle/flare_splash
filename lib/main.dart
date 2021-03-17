@@ -61,15 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Container(
         decoration: new BoxDecoration(
-          gradient: new LinearGradient(
-              colors: [
-                const Color(0xFF00C0FF),
-                const Color(0xFF5558FF),
-              ],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              stops: [0.0, 1.0],
-              tileMode: TileMode.clamp),
+          color: Colors.white,
         ),
         child: Center(
           child: Column(
