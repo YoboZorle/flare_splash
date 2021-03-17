@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
         decoration: new BoxDecoration(
           gradient: new LinearGradient(
               colors: [
-                const Color(0xFF00C0FF),
+                const Color(0xFF5558FF),
                 const Color(0xFF5558FF),
               ],
               begin: Alignment.topCenter,
@@ -24,10 +24,10 @@ class MyApp extends StatelessWidget {
               tileMode: TileMode.clamp),
         ),
         child: SplashScreen.navigate(
-          name: 'intro.flr',
+          name: 'assets/flare/faras.flr',
           next: (context) => MyHomePage(title: 'Flutter Demo Home Page'),
           until: () => Future.delayed(Duration(seconds: 5)),
-          startAnimation: '1',
+          startAnimation: 'Untitled',
         ),
       ),
     );
