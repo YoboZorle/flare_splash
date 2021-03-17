@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -12,11 +11,24 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SplashScreen.navigate(backgroundColor: Color(0xFF814AA0),
-        name: 'intro.flr',
-        next: (context) => MyHomePage(title: 'Flutter Demo Home Page'),
-        until: () => Future.delayed(Duration(seconds: 5)),
-        startAnimation: '1',
+      home: Container(
+        decoration: new BoxDecoration(
+          gradient: new LinearGradient(
+              colors: [
+                const Color(0xFF00C0FF),
+                const Color(0xFF5558FF),
+              ],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              stops: [0.0, 1.0],
+              tileMode: TileMode.clamp),
+        ),
+        child: SplashScreen.navigate(
+          name: 'intro.flr',
+          next: (context) => MyHomePage(title: 'Flutter Demo Home Page'),
+          until: () => Future.delayed(Duration(seconds: 5)),
+          startAnimation: '1',
+        ),
       ),
     );
   }
@@ -47,18 +59,31 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
         backgroundColor: Color(0xFF814AA0),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
-            ),
-          ],
+      body: Container(
+        decoration: new BoxDecoration(
+          gradient: new LinearGradient(
+              colors: [
+                const Color(0xFF00C0FF),
+                const Color(0xFF5558FF),
+              ],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              stops: [0.0, 1.0],
+              tileMode: TileMode.clamp),
+        ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                'You have pushed the button this many times:',
+              ),
+              Text(
+                '$_counter',
+                style: Theme.of(context).textTheme.display1,
+              ),
+            ],
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
