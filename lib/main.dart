@@ -24,10 +24,11 @@ class MyApp extends StatelessWidget {
               tileMode: TileMode.clamp),
         ),
         child: SplashScreen.navigate(
+          height: 100,
           name: 'assets/flare/faras.flr',
           next: (context) => MyHomePage(title: 'Flutter Demo Home Page'),
-          until: () => Future.delayed(Duration(seconds: 5)),
-          startAnimation: 'Untitled',
+          until: () => Future.delayed(Duration(seconds: 6)),
+          startAnimation: 'play',
         ),
       ),
     );
