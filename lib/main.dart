@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
           height: 100,
           name: 'assets/flare/faras.flr',
           next: (context) => MyHomePage(title: 'Flutter Demo Home Page'),
-          until: () => Future.delayed(Duration(seconds: 6)),
+          until: () => Future.delayed(Duration(seconds: 5)),
           startAnimation: 'play',
         ),
       ),
@@ -55,10 +55,10 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF814AA0),
+      backgroundColor: Color(0xFF5558FF),
       appBar: AppBar(
         title: Text(widget.title),
-        backgroundColor: Color(0xFF814AA0),
+        backgroundColor: Color(0xFF5558FF),
       ),
       body: Container(
         decoration: new BoxDecoration(
@@ -73,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               Text(
                 '$_counter',
-                style: Theme.of(context).textTheme.display1,
+                style: Theme.of(context).textTheme.headline2,
               ),
             ],
           ),
